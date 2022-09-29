@@ -38,9 +38,11 @@ export default function App() {
             <span className={`${theme !== "theme" ? "theme--label" : "text-white"  } text-[10px] font-bold mr-4 mb-1`}>THEME</span>
             <div>
               <span className={`${theme !== "theme" ? "theme--label" : "text-white" } text-[10px] font-bold gap-4 flex mb-2`}>
-                <ul>1</ul>
-                <ul>2</ul>
-                <ul>3</ul>
+              <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              </ul>
               </span>
               <div className="flex togglerspan justify-items-stretch">
                 <span className=" flex flex-col">
