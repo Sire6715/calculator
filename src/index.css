@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #3a4764;
+    --keysBackground: #232c43;
+    --screenBackground: #182034;
+    --KeysBackground: #637097;
+    --KeysShadow: #404e72;
+    --equaKeyBackground: #d03f2f;
+    --equalKeyShadow: #93261a;
+    --numKeyBackground: #eae3dc;
+    --numKeyShadow: #b4a597;
+    --num: #444b5a;
+    --white: #ffff;
+    --activeNumKeys: #ffff;
+    --activeEqual: #b17068fc;
+    --activeReset: #a6daef;
+}
+
+[data-theme='theme1'] {
+    --background: #e6e6e6;
+    --keysBackground: #d1cccc;
+    --screenBackground: #ededed;
+    --KeysBackground: #377f86;
+    --KeysShadow: #1b5f65;
+    --equaKeyBackground: #d03f2f;
+    --equalKeyShadow: #ca5502;
+    --numKeyBackground: #e5e4e1;
+    --numKeyShadow: #a69d91;
+    --num: #35352c;
+    --white: #ffff;
+    --activeNumKeys: #ffff;
+    --activeEqual: #d65647fc;
+    --activeReset: #7e89a1;
+}
+
+[data-theme='theme2'] {
+    --background: #160628;
+    --keysBackground: #1d0934;
+    --screenBackground: #1d0934;
+    --KeysBackground: #58077d;
+    --KeysShadow: #bc15f4;
+    --equaKeyBackground: #00e0d1;
+    --equalKeyShadow: #6cf9f2;
+    --numKeyBackground: #341c4f;
+    --numKeyShadow: #871c9c;
+    --num: #ffe53d;
+    --equal: #1b2428;
+    --activeNumKeys: #720397;
+    --activeEqual: #89ebeb;
+    --activeReset: #9700c9;
+}
+
+.background {
+    background-color: var(--background);
+}
+
+.calculator {
+    min-width: 18rem;
+    max-width: 18rem;
+    height: 30rem;
+}
+
+@media (min-width: 768px) {
+    .calculator {
+        min-width: 23rem;
+        max-width: 23rem;
+    }
+}
+
+.toggler{
+    color: var(--equaKeyBackground);
+}
+
+.inactivetoggler{
+    color: var(--keysBackground);
+}
+
+.togglerspan{
+    height: 25px;
+    border-radius: 20px;
+    background-color: var(--keysBackground);
+    position: relative;
+    padding: 4px;
+}
+
+ .theme--label{
+    color: var(--num);
+ }
+
+.cacl {
+    color: var(--num);
+}
+
+.screen {
+    background-color: var(--screenBackground);
+    color: var(--num);
+    overflow-x: auto;
+}
+
+.screen::-webkit-scrollbar{
+    display: none;
+}
+
+.screen{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.keys {
+    display: grid;
+    min-height: 22rem;
+    gap: 1em;
+    background-color: var(--keysBackground);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+.keys>.reset {
+    background-color: var(--KeysBackground);
+    border-radius: 6px;
+    color: var(--white);
+    border-bottom: 4px solid var(--KeysShadow);
+}
+
+.keys>.reset:active {
+    background-color: var(--activeReset);
+}
+
+.equal {
+    background-color: var(--equaKeyBackground);
+    border-radius: 6px;
+    border-bottom: 4px solid var(--equalKeyShadow);
+    color: var(--white);
+}
+
+.equal:active {
+    background-color: var(--activeEqual);
+}
+
+.buttons {
+    background-color: var(--numKeyBackground);
+    border-radius: 6px;
+    color: var(--num);
+    border-bottom: 4px solid var(--numKeyShadow);
+}
+
+.grid-span-two {
+    grid-column: span 2;
+}
+
+.buttons:active {
+    background-color: var(--activeNumKeys);
+}
